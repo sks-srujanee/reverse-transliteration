@@ -1,0 +1,6 @@
+*
+!go.mod
+!main.go
+!bin/
+bin/*
+!bin/translit-reverse-linux-amd64

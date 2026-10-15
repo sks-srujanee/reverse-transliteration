@@ -1,0 +1,85 @@
+{
+  "timestamp_utc": "2026-10-14T19:48:55Z",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "logical_cpus": 10,
+  "workers": 1,
+  "cache": false,
+  "cross_request_batching": false,
+  "warmup": {
+    "status": "200",
+    "valid": true,
+    "latency_ms": 1014.0856669750065
+  },
+  "offered_overload_rps": 10,
+  "offered_overload_seconds": 15,
+  "memory_sampling_interval_seconds": 0.25,
+  "memory": {
+    "peak_api_rss_mib": 13.9,
+    "peak_process_tree_rss_mib": 472.6,
+    "samples": 88
+  },
+  "phases": [
+    {
+      "phase": "sequential_baseline",
+      "elapsed_seconds": 8.274,
+      "requests": 12,
+      "statuses": {
+        "200": 12
+      },
+      "valid_successes": 12,
+      "incorrect_200_responses": 0,
+      "successful_rps": 1.45,
+      "success_latency": {
+        "p50_ms": 686.1,
+        "p95_ms": 708.3,
+        "p99_ms": 708.3
+      },
+      "rejection_latency": null
+    },
+    {
+      "phase": "open_loop_overload",
+      "elapsed_seconds": 15.585,
+      "requests": 150,
+      "statuses": {
+        "200": 22,
+        "503": 128
+      },
+      "valid_successes": 22,
+      "incorrect_200_responses": 0,
+      "successful_rps": 1.412,
+      "success_latency": {
+        "p50_ms": 678.8,
+        "p95_ms": 712.4,
+        "p99_ms": 728.6
+      },
+      "rejection_latency": {
+        "p50_ms": 0.8,
+        "p95_ms": 1.6,
+        "p99_ms": 3.7
+      }
+    },
+    {
+      "phase": "recovery",
+      "elapsed_seconds": 0.662,
+      "requests": 1,
+      "statuses": {
+        "200": 1
+      },
+      "valid_successes": 1,
+      "incorrect_200_responses": 0,
+      "successful_rps": 1.512,
+      "success_latency": {
+        "p50_ms": 661.5,
+        "p95_ms": 661.5,
+        "p99_ms": 661.5
+      },
+      "rejection_latency": null
+    }
+  ],
+  "limitations": [
+    "Local native machine; not production hardware or container limits.",
+    "Short test with one representative multilingual title; not a sustained capacity guarantee.",
+    "RSS sampled at intervals, so brief memory peaks may be missed."
+  ]
+}

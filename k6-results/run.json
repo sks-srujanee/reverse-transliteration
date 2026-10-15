@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-10-15T04:27:26Z",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "logical_cpus": 10,
+  "k6_version": "k6 v2.3.0 (commit/e088784614, go1.26.8, darwin/arm64)",
+  "workers": 1,
+  "rate_limit_rps": 100,
+  "cache": false,
+  "cross_request_batching": false,
+  "warmup_ms": 690.5,
+  "recovery_ms": 693.3,
+  "memory_sample_interval_seconds": 0.25,
+  "memory": {
+    "peak_api_rss_mib": 17.7,
+    "peak_process_tree_rss_mib": 497.6,
+    "samples": 187
+  },
+  "phases": [
+    {
+      "name": "baseline",
+      "offered_rps": null,
+      "elapsed_wall_seconds": 10.53,
+      "k6_exit_code": 0
+    },
+    {
+      "name": "overload",
+      "offered_rps": 10,
+      "elapsed_wall_seconds": 30.434,
+      "k6_exit_code": 0
+    },
+    {
+      "name": "burst",
+      "offered_rps": 50,
+      "elapsed_wall_seconds": 10.557,
+      "k6_exit_code": 0
+    }
+  ]
+}
